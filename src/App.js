@@ -3,6 +3,10 @@ import './App.css';
 
 function App() {
 
+  const buttonOnChangeHandler = (evt) => {
+    console.log(evt.target)
+  }
+
   return (
     <>
       <div className='container'>
@@ -13,8 +17,8 @@ function App() {
             <li className='quiz-item' key={index}>
               <p>{index + 1}. {question.questionText}</p>
               {
-                question.answerOptions.map((answerOption) => (
-                  <button className='quiz-button'>{answerOption.answerText}</button>
+                question.answerOptions.map((answerOption, index) => (
+                  <button key={index} className='quiz-button' type='button' onClick={buttonOnChangeHandler}>{answerOption.option}. {answerOption.answerText}</button>
                 ))
               }
             </li>
