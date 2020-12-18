@@ -1,5 +1,6 @@
 const data = [
   {
+    id: 0,
     questionText: 'What is React?',
     answerOptions: [
       { answerText: 'React is an open-source frontend JavaScript library which is used for building user interfaces especially for single page applications. It is used for handling view layer for web and mobile apps.',
@@ -17,6 +18,7 @@ const data = [
     ]
   },
   {
+    id: 1,
     questionText: 'What are the major features of React?',
     answerOptions: [
       { answerText: 'It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.',
