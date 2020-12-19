@@ -33,11 +33,14 @@ function App() {
       left: evt.target.parentElement.clientHeight,
       behavior: 'smooth'
     });
+
+    if (showScore) {
+      setQuizHeading('Your score')
+    }
   };
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-    setQuizHeading('Your score')
   }, [
     showScore
   ])
