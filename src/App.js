@@ -33,6 +33,7 @@ function App() {
     <div className='container'>
       {
         <>
+          <h1 className='quiz-heading'>Test your knowledge</h1>
           <ul className='quiz-list'>
             {
               Questions.map((question, index) => {

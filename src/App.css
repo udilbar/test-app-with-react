@@ -23,6 +23,11 @@ body {
   margin-right: auto;
 }
 
+.quiz-heading {
+  text-align: center;
+  text-shadow: 1px 1px 10px #333;
+}
+
 .quiz-list {
   background-color: #252d4a;
   margin: 0;
