@@ -7,6 +7,7 @@ function App() {
   const [score, setScore] = useState(0)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [showScore, setShowScore] = useState(false)
+  const [quizHeading, setQuizHeading] = useState('Test your knowledge')
 
   const buttonOnChangeHandler = (evt) => {
     if (evt.target.attributes.iscorrect.value === 'true') {
@@ -36,6 +37,7 @@ function App() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    setQuizHeading('Your score')
   }, [
     showScore
   ])
@@ -45,7 +47,7 @@ function App() {
     <div className='container'>
       {
         <>
-          <h1 className='quiz-heading'>Test your knowledge</h1>
+          <h1 className='quiz-heading'>{quizHeading}</h1>
           {
             showScore && (
               <div className='score-section'>
