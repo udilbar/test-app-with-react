@@ -89,14 +89,38 @@ body {
 }
 
 .score-section {
+  position: relative;
+  z-index: 1;
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: #252d4a;
   text-align: center;
   padding: 20px;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  box-shadow: 1px 1px 24px 5px #fff,
+  -1px 1px 24px 5px #fff,
+  1px -1px 24px 5px #fff,
+  -1px -1px 24px 5px #fff;
+}
+
+.score-section::after,
+.score-section::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  top: 18px;
+  border-bottom: 30px solid #fff;
+  border-left: 33px solid transparent;
+  border-right: 33px solid transparent;
+}
+
+.score-section::after {
+  right: -19px;
+  transform: rotate(-90deg);
+}
+
+.score-section::before {
+  left: -19px;
+  transform: rotate(90deg);
 }
