@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Questions from './Components/Data/Data'
 import './App.css';
 
@@ -27,6 +27,12 @@ function App() {
       setShowScore(true);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, document.body.scrollHeight);
+  }, [
+    showScore
+  ])
 
   return (
 
