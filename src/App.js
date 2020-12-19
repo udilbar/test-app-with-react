@@ -26,10 +26,16 @@ function App() {
     } else {
       setShowScore(true);
     }
+
+    window.scrollBy({
+      top: evt.clientY,
+      left: evt.target.parentElement.clientHeight,
+      behavior: 'smooth'
+    });
   };
 
   useEffect(() => {
-    window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, [
     showScore
   ])
@@ -40,6 +46,13 @@ function App() {
       {
         <>
           <h1 className='quiz-heading'>Test your knowledge</h1>
+          {
+            showScore && (
+              <div className='score-section'>
+                You scored {score} out of {Questions.length}
+              </div>
+            )
+          }
           <ul className='quiz-list'>
             {
               Questions.map((question, index) => {
@@ -54,13 +67,6 @@ function App() {
               })
             }
           </ul>
-          {
-            showScore && (
-              <div className='score-section'>
-                You scored {score} out of {Questions.length}
-              </div>
-            )
-          }
         </>
       }
     </div>
