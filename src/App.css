@@ -17,12 +17,10 @@ body {
 }
 
 .container {
-  padding-top: 20px;
+  padding: 20px;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .quiz-list {
