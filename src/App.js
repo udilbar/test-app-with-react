@@ -26,6 +26,7 @@ function App() {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
+      setQuizHeading('Your score')
     }
 
     window.scrollBy({
@@ -33,10 +34,6 @@ function App() {
       left: evt.target.parentElement.clientHeight,
       behavior: 'smooth'
     });
-
-    if (showScore) {
-      setQuizHeading('Your score')
-    }
   };
 
   useEffect(() => {
